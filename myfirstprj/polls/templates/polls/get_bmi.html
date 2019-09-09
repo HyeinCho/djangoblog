@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>bmi 측정기</h1>
+	<table border='1' width='500'>
+		<tr>
+			<td>키</td><td>몸무게</td><td>BMI지수</td>
+		</tr>
+		<tr>
+			<td>{{cm}}cm</td><td>{{kg}}kg</td><td>{{bmi}}</td>
+		</tr>
+	</table>
+	<a href="{% url 'polls:index' %}">
+		메인으로 돌아가기
+	</a>
+</body>
+</html>

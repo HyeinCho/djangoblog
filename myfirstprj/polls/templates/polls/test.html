@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>render함수 테스트</h1>
+	<div>
+		render 함수를 이용하면 이렇게<br>
+		html파일을 완성시켜놓고 연결할 수 있습니다.
+	</div>
+	<div>
+		이 파일은 HttpResponse 기준으로 한 문자열로 작성해야 하는<br>
+		복잡한 코드를 보다 손쉽게 작성할 수 있게 만들어줍니다.
+	</div>
+	<a href="{% url 'polls:index' %}">		<!-- http://127.0.0.1:8000/polls/ 까지는 입력되어있음 -->
+		main으로 돌아가기
+	</a>
+</body>
+</html>

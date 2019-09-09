@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="{% url 'polls:get' %}" method="post">
+		{% csrf_token %}	<!-- post방식을 쓸 때 보안성 강화 -->
+		str1의 파라미터값을 입력: <input type="text" name="str1"> <br>
+		str2의 파라미터값을 입력: <input type="text" name="str2"> <br>
+		<input type="submit" value="제출">
+	</form>
+</body>
+</html>

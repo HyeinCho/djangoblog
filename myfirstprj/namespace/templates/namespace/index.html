@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>namespace 어플리케이션의 메인페이지입니다</h1>
+	<a href="{% url 'namespace:lotto' %}">로또추첨 페이지로 이동</a><br>
+	<a href="http://www.naver.com">네이버 페이지로 이동</a><br>
+	<a href="{% url 'namespace:naver' %}">네이버 페이지로 이동(집계)</a><br>
+	<a href="http://www.daum.net">다음 페이지로 이동</a><br>
+	<a href="{% url 'namespace:daum' %}">다음페이지로 이동(집계)</a><br>
+	<a href="{% url 'namespace:lotto_mv' %}">로또페이지로 이동(집계)</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	{% if latest_question_list %}	<!-- 자료가 있으면 true -->
+		<ul>
+			{% for question in latest_question_list %}
+				<li>
+					<!-- polls:detail 패턴은 가변숫자를 받기 때문에 가변숫자자리에 어떤 자료를 넣어줄지 결정해야함 -->
+					<a href="{% url 'polls:detail' question.pk %}">		<!-- "/polls/{{question.pk}}" -->
+						{{question.question_text}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}	<!-- 자료가 없으면 false -->
+		<p>No polls are available.</p>
+	{% endif %}
+</body>
+</html>

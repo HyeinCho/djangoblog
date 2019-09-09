@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 파이썬 구문을 장고 템플릿 내부에서 사용하고 싶다면 {(퍼센트기호) 구문 (퍼센트기호)}을 사용한다. -->
+	{% for data in question_all %}
+		<h1>{{data}}</h1>
+	<!-- 파이썬 구문이지만 들여쓰기로 타겟 실행문 범위를 정하지 않으므로 끝나는 지점을 같이 작성해줘야함 -->
+	{% endfor %}
+</body>
+</html>

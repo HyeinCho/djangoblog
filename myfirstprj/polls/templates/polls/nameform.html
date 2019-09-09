@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- form이란 특정 페이지에 보낼 양식을 작성하는 페이지입니다.
+		form 태그를 이용해 작성하며 필수 작성 속성은
+		action(목적지의 주소), method(get방식 post방식 선택)입니다. -->
+	<!-- get방식은 주소에 전송정보를 담아서 보냅니다. -->
+	<form action="{% url 'polls:name' %}" method="POST">
+		{% csrf_token %}
+		당신의 이름을 적어주세요:
+		<!-- 일반적인 form은 어떤 이름에 자료를 담아서 보낼지 name 속성으로 지정합니다. -->
+		<input type="text" name="name">
+		<!-- submit은 제출버튼이며 value속성에 적은 값이 실제로 버튼에 새겨질 이름이 됩니다. -->
+		<input type="submit" value="제출">
+	</form>
+</body>
+</html>
